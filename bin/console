@@ -2,25 +2,13 @@
 <?php
 require __DIR__.'/../vendor/autoload.php';
 
+use Github\Client;
+use Lordrhodos\GithubTools\Command\ConvertCommand;
+use Lordrhodos\GithubTools\Converter;
 use Symfony\Component\Console\Application;
-use Lordrhodos\OAuth2Server\DependencyInjection\RepositoryProvider;
-use Lordrhodos\OAuth2Server\DependencyInjection\CommandProvider;
-use Lordrhodos\OAuth2Server\Command\ClientCommand;
-use Lordrhodos\OAuth2Server\Command\OrganizationCommand;
-use Lordrhodos\OAuth2Server\Command\UserCommand;
-use Lordrhodos\OAuth2Server\Command\DevSetupCommand;
-use Lordrhodos\OAuth2Server\Command\MigrateCommand;
-
-$settings = require __DIR__.'/../src/settings.php';
-$container = new League\Container\Container();
-$container->addServiceProvider(new RepositoryProvider($settings));
-$container->addServiceProvider(new CommandProvider($settings));
 
 $application = new Application();
-$application->add(($container->get(ClientCommand::class, true)));
-$application->add(($container->get(OrganizationCommand::class, true)));
-$application->add(($container->get(UserCommand::class, true)));
-$application->add(($container->get(DevSetupCommand::class, true)));
-$application->add(($container->get(MigrateCommand::class, true)));
+$converter = new Converter(new Client());
+$application->add(new ConvertCommand($converter));
 
 $application->run();
