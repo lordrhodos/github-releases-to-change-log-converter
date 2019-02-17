@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/lordrhodos/github-releases-to-change-log-converter.svg?branch=master)](https://travis-ci.org/lordrhodos/github-releases-to-change-log-converter)
 
-A collection of useful PHP utilities. It includes for example string and array helper functions.
+Converts the releases of a Github repository into a changelog
 
 ## Requirements
 - Requires PHP 7.1 or above.
