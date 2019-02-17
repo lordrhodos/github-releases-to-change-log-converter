@@ -8,8 +8,15 @@ php:
 install:
   - composer install --dev --no-interaction
 
+before_script:
+  - composer require php-coveralls/php-coveralls:^2.1.0
+  - composer install -n
+
 script:
-  - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
+  - vendor/bin/phpunit --coverage-text --coverage-clover=clover.xml
+
+after_success:
+  - vendor/bin/php-coveralls --coverage_clover=clover.xml
 
 notifications:
     email: true
