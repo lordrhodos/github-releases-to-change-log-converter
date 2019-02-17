@@ -22,4 +22,4 @@ $ git clone git@github.com:lordrhodos/github-releases-to-change-log-converter.gi
 
 
 ## License
-This software is licensed under the BSD 3-Clause License - see the `LICENSE` file for details.
+This software is licensed under the MIT License - see the `LICENSE` file for details.
