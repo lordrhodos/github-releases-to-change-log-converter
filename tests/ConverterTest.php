@@ -57,6 +57,19 @@ class ConverterTest extends TestCase
         $this->assertIsArray($releases);
     }
 
+    public function testSetToken()
+    {
+        $githubClientMock = $this->createMock(GithubClient::class);
+        $githubClientMock
+            ->expects($this->once())
+            ->method('authenticate')
+            ->with('foo', null, GithubClient::AUTH_JWT);
+
+        $converter = new Converter($githubClientMock);
+
+        $converter->setToken('foo');
+    }
+
     /**
      * returns a sample response taken from the github releases api doc at
      * https://developer.github.com/v3/repos/releases/

@@ -33,4 +33,9 @@ class Converter
     {
         return $this->githubClient->api('repos')->releases()->all($owner, $repository);
     }
+
+    public function setToken(string $token): void
+    {
+        $this->githubClient->authenticate($token, null, Client::AUTH_JWT);
+    }
 }
