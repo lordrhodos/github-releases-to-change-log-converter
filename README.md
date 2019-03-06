@@ -14,7 +14,7 @@ Add the package as a requirement to your `composer.json`:
 $ composer require lordrhodos/github-releases-to-change-log-converter
 ```
 
-or clone the projec if you want to use it as stand alone consoel application:
+or clone the project if you want to use it as stand alone consoel application:
 
 ```bash
 $ git clone git@github.com:lordrhodos/github-releases-to-change-log-converter.git
