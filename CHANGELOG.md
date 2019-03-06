@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - coveralls code coverage integration
+- github OAuth2 authentication support
 
 ## [0.1.2] 2019-02-17
 ### Fixed
