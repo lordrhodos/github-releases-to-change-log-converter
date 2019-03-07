@@ -1,4 +1,4 @@
-# Utils
+# Github Release to Changelog Converter
 
 [![Build Status](https://travis-ci.org/lordrhodos/github-releases-to-change-log-converter.svg?branch=master)](https://travis-ci.org/lordrhodos/github-releases-to-change-log-converter)
 [![Coverage Status](https://coveralls.io/repos/github/lordrhodos/github-releases-to-change-log-converter/badge.svg?branch=master)](https://coveralls.io/github/lordrhodos/github-releases-to-change-log-converter?branch=master)
