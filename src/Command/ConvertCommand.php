@@ -46,7 +46,7 @@ class ConvertCommand extends Command
         $io = new SymfonyStyle($input, $output);
         $io->title(\sprintf('Creating Changelog from releases for https://github.com/%s/%s', $owner, $repository));
 
-        if ($input->hasOption('authenticate')) {
+        if ($input->getOption('authenticate')) {
             $token = $this->askTokenQuestion($input, $output);
             $this->converter->setToken($token);
         }
