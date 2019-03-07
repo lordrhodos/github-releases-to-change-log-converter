@@ -60,7 +60,7 @@ class ConvertCommandTest extends TestCase
             ->willReturnOnConsecutiveCalls('foo', 'bar');
         $inputMock
             ->expects($this->once())
-            ->method('hasOption')
+            ->method('getOption')
             ->with('authenticate')
             ->willReturn(true);
 
@@ -104,7 +104,7 @@ class ConvertCommandTest extends TestCase
             ->willReturnOnConsecutiveCalls('foo', 'bar');
         $inputMock
             ->expects($this->once())
-            ->method('hasOption')
+            ->method('getOption')
             ->with('authenticate')
             ->willReturn(true);
 
